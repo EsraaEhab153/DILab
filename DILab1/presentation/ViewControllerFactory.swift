@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import UIKit
+
+protocol ViewControllerFactory {
+    func makeMovieDetailsViewController(movieName: String) -> UIViewController
+}

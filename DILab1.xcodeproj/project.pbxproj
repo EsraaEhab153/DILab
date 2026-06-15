@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA84A68E2FE03A770006A914 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84A68D2FE03A760006A914 /* ViewControllerFactory.swift */; };
+		CA84A6932FE03B150006A914 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84A6912FE03B150006A914 /* SecondViewController.swift */; };
+		CA84A6942FE03B150006A914 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA84A6922FE03B150006A914 /* SecondViewController.xib */; };
+		CA84A6962FE03BD80006A914 /* SecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84A6952FE03BD80006A914 /* SecondViewModel.swift */; };
 		CAB4A4072FDFECCC00621895 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB4A4062FDFECCC00621895 /* AppDelegate.swift */; };
 		CAB4A4092FDFECCC00621895 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB4A4082FDFECCC00621895 /* SceneDelegate.swift */; };
 		CAB4A40B2FDFECCC00621895 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB4A40A2FDFECCC00621895 /* ViewController.swift */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA84A68D2FE03A760006A914 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		CA84A6912FE03B150006A914 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		CA84A6922FE03B150006A914 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+		CA84A6952FE03BD80006A914 /* SecondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewModel.swift; sourceTree = "<group>"; };
 		CAB4A4032FDFECCC00621895 /* DILab1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DILab1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB4A4062FDFECCC00621895 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAB4A4082FDFECCC00621895 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +55,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA84A68F2FE03AEA0006A914 /* First */ = {
+			isa = PBXGroup;
+			children = (
+				CAB4A40A2FDFECCC00621895 /* ViewController.swift */,
+				CAB4A4212FDFEEB800621895 /* MovieListViewModel.swift */,
+			);
+			path = First;
+			sourceTree = "<group>";
+		};
+		CA84A6902FE03AF60006A914 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				CA84A6912FE03B150006A914 /* SecondViewController.swift */,
+				CA84A6922FE03B150006A914 /* SecondViewController.xib */,
+				CA84A6952FE03BD80006A914 /* SecondViewModel.swift */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
 		CAB4A3FA2FDFECCB00621895 = {
 			isa = PBXGroup;
 			children = (
@@ -100,8 +127,9 @@
 		CAB4A4202FDFEE7D00621895 /* presentation */ = {
 			isa = PBXGroup;
 			children = (
-				CAB4A40A2FDFECCC00621895 /* ViewController.swift */,
-				CAB4A4212FDFEEB800621895 /* MovieListViewModel.swift */,
+				CA84A6902FE03AF60006A914 /* Second */,
+				CA84A68F2FE03AEA0006A914 /* First */,
+				CA84A68D2FE03A760006A914 /* ViewControllerFactory.swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -164,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA84A6942FE03B150006A914 /* SecondViewController.xib in Resources */,
 				CAB4A4132FDFECCE00621895 /* LaunchScreen.storyboard in Resources */,
 				CAB4A4102FDFECCE00621895 /* Assets.xcassets in Resources */,
 				CAB4A40E2FDFECCC00621895 /* Main.storyboard in Resources */,
@@ -180,10 +209,13 @@
 				CAB4A4242FDFF1C700621895 /* Movie.swift in Sources */,
 				CAB4A41F2FDFEDF500621895 /* FetchMoviesUseCase.swift in Sources */,
 				CAB4A40B2FDFECCC00621895 /* ViewController.swift in Sources */,
+				CA84A68E2FE03A770006A914 /* ViewControllerFactory.swift in Sources */,
 				CAB4A4072FDFECCC00621895 /* AppDelegate.swift in Sources */,
+				CA84A6962FE03BD80006A914 /* SecondViewModel.swift in Sources */,
 				CAB4A4262FDFF2E900621895 /* DIContainer.swift in Sources */,
 				CAB4A41C2FDFED2300621895 /* MovieService.swift in Sources */,
 				CAB4A4092FDFECCC00621895 /* SceneDelegate.swift in Sources */,
+				CA84A6932FE03B150006A914 /* SecondViewController.swift in Sources */,
 				CAB4A4222FDFEEB800621895 /* MovieListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

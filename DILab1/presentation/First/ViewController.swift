@@ -10,9 +10,11 @@ import UIKit
 class ViewController: UIViewController {
 
     private let viewModel: MovieListViewModel
-
-        init?(coder: NSCoder, viewModel: MovieListViewModel) {
+    private let factory: ViewControllerFactory
+    
+    init?(coder: NSCoder, viewModel: MovieListViewModel, factory: ViewControllerFactory) {
             self.viewModel = viewModel
+            self.factory = factory
             super.init(coder: coder)
         }
 
@@ -28,4 +30,13 @@ class ViewController: UIViewController {
             print(" Loaded Movies:")
             viewModel.movies.forEach { print("- \($0.title)") }
         }
+    
+    func openMovieDetails(movieName: String) {
+            let detailsVC = factory.makeMovieDetailsViewController(movieName: movieName)
+            self.navigationController?.pushViewController(detailsVC, animated: true)
+        }
+    
+    @IBAction func GoToNextScreen(_ sender: Any) {
+        openMovieDetails(movieName: "movie 1")
     }
+}

@@ -28,11 +28,22 @@ class DIContainer {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         guard let viewController = storyboard.instantiateInitialViewController(creator: { coder in
-            return ViewController(coder: coder, viewModel: self.resolveMovieListViewModel())
+            return ViewController(coder: coder, viewModel: self.resolveMovieListViewModel(), factory: self)
         }) else {
             fatalError("Failed to load ViewController from storyboard.")
         }
         
         return viewController
+    }
+    
+    func resolveMovieDetailsViewController(movieName: String) -> SecondViewController {
+        let viewModel = SecondViewModel(movieName: movieName)
+        return SecondViewController(viewModel: viewModel)
+    }
+}
+
+extension DIContainer: ViewControllerFactory {
+    func makeMovieDetailsViewController(movieName: String) -> UIViewController {
+        return resolveMovieDetailsViewController(movieName: movieName)
     }
 }
